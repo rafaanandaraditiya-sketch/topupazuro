@@ -2205,3 +2205,95 @@ footer hr{
     transform:scale(1.05);
 
 }
+/* ==========================================
+        MOBILE RESPONSIVE
+========================================== */
+
+@media screen and (max-width: 768px){
+
+    nav{
+        padding:15px 20px;
+    }
+
+    .hero,
+    .banner,
+    .slider-content{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero-text,
+    .banner-text{
+        width:100%;
+    }
+
+    .hero-image,
+    .banner-image{
+        width:100%;
+        margin-top:30px;
+    }
+
+    .hero-image img,
+    .banner-image img{
+        width:100%;
+        max-width:350px;
+    }
+
+    .slider{
+        height:auto;
+        border-radius:20px;
+    }
+
+    .slide{
+        padding:30px 20px;
+    }
+
+    .search-box{
+        width:100%;
+    }
+
+    .search-box input{
+        width:100%;
+    }
+
+    .game-grid{
+        grid-template-columns:1fr 1fr;
+        gap:15px;
+    }
+
+    .game-card{
+        width:100%;
+    }
+
+    .payment-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .feature-grid,
+    .info-grid,
+    .footer-container{
+        grid-template-columns:1fr;
+    }
+
+    .support{
+        padding:30px 20px;
+    }
+
+    h1{
+        font-size:34px;
+    }
+
+    h2{
+        font-size:28px;
+    }
+
+    p{
+        font-size:15px;
+    }
+
+    .btn,
+    .support-btn{
+        width:100%;
+    }
+
+}
