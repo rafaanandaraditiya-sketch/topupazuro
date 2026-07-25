@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Top Up PUBG Mobile</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+
+        🎮 TopUpZone
+
+    </div>
+
+    <ul>
+
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#game">Game</a></li>
+        <li><a href="#promo">Promo</a></li>
+        <li><a href="#faq">Bantuan</a></li>
+
+    </ul>
+
+</nav>
+
+<section class="game-header fade-up">
+
+    <img src="assets/pubg.png" alt="PUBG Mobile">
+
+    <div>
+
+        <h1>PUBG Mobile</h1>
+
+        <p>
+            Top Up UC PUBG Mobile dengan proses cepat, aman, dan harga terbaik.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="game-info-box fade-up">
+
+    <div class="info-left">
+
+        <img src="assets/pubg.png" alt="Cara Melihat ID">
+
+    </div>
+
+    <div class="info-right">
+
+        <h2>Cara Menemukan Player ID</h2>
+
+        <p>
+                Buka PUBG Mobile, buka profil, lalu temukan Player ID di bagian akun.
+            <li>✅ Tanpa Login Akun</li>
+            <li>✅ Aman 100%</li>
+            <li>✅ Support 24 Jam</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+<section class="topup-container fade-up">
+
+    <div class="left">
+
+        <div class="box">
+
+            <h2>1. Masukkan Data Akun</h2>
+
+            <div class="form-group">
+
+                <label>Player ID</label>
+                <input type="text" placeholder="Masukkan Player ID">
+
+            </div>
+
+        </div>
+
+        <div class="box">
+
+            <h2>2. Pilih UC</h2>
+
+            <div class="nominal-grid">
+
+                <div class="nominal-card" data-name="60 UC" data-price="Rp16.000">
+                    <h3>💎 60</h3>
+                    <p>Rp16.000</p>
+                </div>
+
+                <div class="nominal-card" data-name="325 UC" data-price="Rp79.000">
+                    <h3>💎 325</h3>
+                    <p>Rp79.000</p>
+                </div>
+
+                <div class="nominal-card" data-name="660 UC" data-price="Rp155.000">
+                    <h3>💎 660</h3>
+                    <p>Rp155.000</p>
+                </div>
+
+                <div class="nominal-card" data-name="1800 UC" data-price="Rp390.000">
+                    <h3>💎 1800</h3>
+                    <p>Rp390.000</p>
+                </div>
+
+                <div class="nominal-card" data-name="3600 UC" data-price="Rp750.000">
+                    <h3>💎 3600</h3>
+                    <p>Rp750.000</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="box">
+
+            <h2>3. Pilih Metode Pembayaran</h2>
+
+            <div class="payment-grid">
+
+                <div class="payment-card" data-payment="QRIS">
+                    <img src="assets/qris.png" alt="QRIS">
+                    <p>QRIS</p>
+                </div>
+
+                <div class="payment-card" data-payment="DANA">
+                    <img src="assets/dana.png" alt="DANA">
+                    <p>DANA</p>
+                </div>
+
+                <div class="payment-card" data-payment="OVO">
+                    <img src="assets/ovo.png" alt="OVO">
+                    <p>OVO</p>
+                </div>
+
+                <div class="payment-card" data-payment="GoPay">
+                    <img src="assets/gopay.png" alt="GoPay">
+                    <p>GoPay</p>
+                </div>
+
+                <div class="payment-card" data-payment="ShopeePay">
+                    <img src="assets/shopeepay.png" alt="ShopeePay">
+                    <p>ShopeePay</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="right">
+
+        <div class="summary">
+
+            <h2>Ringkasan Pesanan</h2>
+
+            <div class="summary-item">
+                <span>Game</span>
+                <span>PUBG Mobile</span>
+            </div>
+
+            <div class="summary-item">
+                <span>Nominal</span>
+                <span id="summaryNominal">-</span>
+            </div>
+
+            <div class="summary-item">
+                <span>Pembayaran</span>
+                <span id="summaryPayment">-</span>
+            </div>
+
+            <hr>
+
+            <div class="summary-item total">
+                <span>Total</span>
+                <span id="summaryPrice">Rp0</span>
+            </div>
+
+            <button class="buy-btn" onclick="checkout()">
+                Bayar Sekarang
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="feature fade-up">
+
+    <h2>Mengapa Memilih TopUpZone?</h2>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+            <i class="fa-solid fa-bolt"></i>
+            <h3>Proses Cepat</h3>
+            <p>Pesanan diproses dalam hitungan menit.</p>
+        </div>
+
+        <div class="feature-card">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h3>Aman</h3>
+            <p>Tidak membutuhkan password akun.</p>
+        </div>
+
+        <div class="feature-card">
+            <i class="fa-solid fa-wallet"></i>
+            <h3>Harga Murah</h3>
+            <p>Harga bersaing setiap hari.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="information fade-up">
+
+    <h2>Tentang Top Up PUBG Mobile</h2>
+
+    <p>
+        Top up UC PUBG Mobile murah, cepat, dan aman. UC akan dikirim langsung ke akun setelah pembayaran berhasil.
+    </p>
+
+    <h3>Cara Top Up</h3>
+
+    <ol>
+        <li>Masukkan Player ID.</li>
+        <li>Pilih jumlah UC.</li>
+        <li>Pilih metode pembayaran.</li>
+        <li>Klik Bayar Sekarang.</li>
+        <li>Selesaikan pembayaran.</li>
+        <li>UC otomatis masuk ke akun.</li>
+    </ol>
+
+    <h3>Catatan</h3>
+
+    <ul>
+        <li>✔ Tidak memerlukan password akun.</li>
+        <li>✔ UC masuk 1-5 menit.</li>
+        <li>✔ Layanan 24 Jam.</li>
+        <li>✔ Aman & terpercaya.</li>
+    </ul>
+
+</section>
+
+<section class="related-games">
+
+    <h2>Game Lainnya</h2>
+
+    <div class="game-grid">
+
+        <div class="game-card">
+            <img src="assets/ml.png" alt="Mobile Legends">
+            <div class="game-info"><h3>Mobile Legends</h3><a href="ml.html"><button class="game-btn">Top Up</button></a></div>
+        </div>
+
+        <div class="game-card">
+            <img src="assets/ff.png" alt="Free Fire">
+            <div class="game-info"><h3>Free Fire</h3><a href="ff.html"><button class="game-btn">Top Up</button></a></div>
+        </div>
+
+        <div class="game-card">
+            <img src="assets/valorant.png" alt="Valorant">
+            <div class="game-info"><h3>Valorant</h3><a href="valorant.html"><button class="game-btn">Top Up</button></a></div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="faq fade-up" id="faq">
+
+    <h2>Pertanyaan yang Sering Diajukan</h2>
+
+    <div class="faq-item">
+        <button class="faq-question">Berapa lama proses top up?</button>
+        <div class="faq-answer"><p>UC biasanya masuk dalam waktu 1-5 menit setelah pembayaran berhasil.</p></div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">Apakah perlu password akun?</button>
+        <div class="faq-answer"><p>Tidak. Cukup masukkan Player ID.</p></div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">Metode pembayaran apa saja?</button>
+        <div class="faq-answer"><p>QRIS, DANA, OVO, GoPay, ShopeePay, BCA, BRI dan Mandiri.</p></div>
+    </div>
+
+</section>
+
+<section class="support fade-up">
+
+    <h2>Butuh Bantuan?</h2>
+    <p>Tim Customer Service kami siap membantu 24 jam setiap hari.</p>
+    <a href="https://wa.me/6287828163765" target="_blank"><button class="support-btn"><i class="fa-brands fa-whatsapp"></i> Hubungi WhatsApp</button></a>
+
+</section>
+
+<footer>
+
+    <div class="footer-container">
+
+        <div class="footer-box"><h3>TopUpZone</h3><p>Website top up game terpercaya dengan proses cepat, aman, dan harga terbaik.</p></div>
+        <div class="footer-box"><h3>Menu</h3><a href="index.html">Home</a><a href="#">Game</a><a href="#promo">Promo</a><a href="#faq">Bantuan</a></div>
+        <div class="footer-box"><h3>Metode Pembayaran</h3><p>QRIS</p><p>DANA</p><p>OVO</p><p>GoPay</p><p>ShopeePay</p><p>BCA</p><p>BRI</p></div>
+        <div class="footer-box"><h3>Hubungi Kami</h3><p>📱 WhatsApp</p><p>📧 support@topupzone.com</p><p>🕒 24 Jam</p></div>
+
+    </div>
+
+    <hr>
+    <p class="copyright">© 2026 TopUpZone. All Rights Reserved.</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

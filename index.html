@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TopUpZone - Top Up Game Murah & Cepat</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= LOADER ================= -->
+
+<div id="loader">
+
+    <div class="loader-box">
+
+        <div class="loader-circle"></div>
+
+        <h2>Loading...</h2>
+
+        <p>Mohon tunggu sebentar</p>
+
+    </div>
+
+</div>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+    <div class="logo">
+
+        <a href="index.html" style="text-decoration: none; color: inherit;">🎮 Top<span>UpZone</span></a>
+
+    </div>
+
+    <ul id="navMenu" class="nav-menu">
+
+        <li><a href="#" class="nav-link active">Home</a></li>
+
+        <li><a href="#game" class="nav-link">Game</a></li>
+
+        <li><a href="#payment" class="nav-link">Pembayaran</a></li>
+
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+
+    </ul>
+
+    <div class="nav-right">
+
+        <a href="login.html" class="login-link-nav">Login</a>
+
+        <button id="darkModeBtn" class="dark-btn">
+
+            🌙
+
+        </button>
+
+        <button id="hamburger" class="hamburger">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+</nav>
+
+<!-- ================= SLIDER ================= -->
+
+<section class="slider">
+
+    <div class="slide fade">
+
+        <img src="assets/banner1.png">
+
+    </div>
+
+    <div class="slide fade">
+
+        <img src="assets/banner2.png">
+
+    </div>
+
+    <div class="slide fade">
+
+        <img src="assets/banner3.png">
+
+    </div>
+
+    <div class="slider-controls">
+
+        <button onclick="changeSlide(-1)" class="slider-btn prev">❮</button>
+
+        <button onclick="changeSlide(1)" class="slider-btn next">❯</button>
+
+    </div>
+
+    <div class="slider-dots">
+
+        <span class="dot" onclick="currentSlide(1)"></span>
+
+        <span class="dot" onclick="currentSlide(2)"></span>
+
+        <span class="dot" onclick="currentSlide(3)"></span>
+
+    </div>
+
+</section>
+
+<!-- ================= PROMO ================= -->
+
+<section class="promo fade-up" id="promo">
+
+    <h2>🔥 Promo Hari Ini</h2>
+
+    <div class="promo-grid">
+
+        <div class="promo-card">
+
+            <div class="promo-icon">🎮</div>
+
+            <h3>Mobile Legends</h3>
+
+            <p>Diskon hingga <b>20%</b></p>
+
+            <span>Berlaku Hari Ini</span>
+
+        </div>
+
+        <div class="promo-card">
+
+            <div class="promo-icon">🔥</div>
+
+            <h3>Free Fire</h3>
+
+            <p>Bonus 5 Diamond</p>
+
+            <span>Minimal Top Up Rp50.000</span>
+
+        </div>
+
+        <div class="promo-card">
+
+            <div class="promo-icon">🎯</div>
+
+            <h3>Valorant</h3>
+
+            <p>Cashback <b>10%</b></p>
+
+            <span>Metode QRIS</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= SEARCH ================= -->
+
+<section class="search-section fade-up">
+
+    <h2>Pilih Game Favoritmu</h2>
+
+    <p>
+        Top Up game favoritmu dengan proses cepat,
+        aman dan harga terbaik.
+    </p>
+
+    <input
+
+    type="text"
+
+    id="searchGame"
+
+    placeholder="🔍 Cari Game..."
+
+    onkeyup="cariGame()">
+
+</section>
+
+<!-- ================= GAME ================= -->
+
+<section class="games fade-up" id="game">
+
+<h2>Game Populer</h2>
+
+<div class="game-grid">
+    <!-- Mobile Legends -->
+
+<div class="game-card fade-up" data-game="mobile legends">
+
+    <span class="badge">POPULER</span>
+
+    <img src="assets/ml.png" alt="Mobile Legends">
+
+    <div class="game-info">
+
+        <h3>Mobile Legends</h3>
+
+        <p>Top Up Diamond MLBB termurah & tercepat.</p>
+
+        <a href="ml.html">
+            <button class="game-btn">Top Up Sekarang</button>
+        </a>
+
+    </div>
+
+</div>
+
+<!-- Free Fire -->
+
+<div class="game-card fade-up" data-game="free fire">
+
+    <img src="assets/ff.png" alt="Free Fire">
+
+    <div class="game-info">
+
+        <h3>Free Fire</h3>
+
+        <p>Top Up Diamond Free Fire dengan harga hemat.</p>
+
+        <a href="ff.html">
+            <button class="game-btn">Top Up Sekarang</button>
+        </a>
+
+    </div>
+
+</div>
+
+<!-- Valorant -->
+
+<div class="game-card fade-up" data-game="valorant">
+
+    <img src="assets/valorant.png" alt="Valorant">
+
+    <div class="game-info">
+
+        <h3>Valorant</h3>
+
+        <p>Beli Valorant Points instan.</p>
+
+        <a href="valorant.html">
+            <button class="game-btn">Top Up Sekarang</button>
+        </a>
+
+    </div>
+
+</div>
+
+<!-- PUBG -->
+
+<div class="game-card fade-up" data-game="pubg">
+
+    <img src="assets/pubg.png" alt="PUBG Mobile">
+
+    <div class="game-info">
+
+        <h3>PUBG Mobile</h3>
+
+        <p>UC PUBG Mobile murah & cepat.</p>
+
+        <a href="pubg.html">
+            <button class="game-btn">Top Up Sekarang</button>
+        </a>
+
+    </div>
+
+</div>
+
+<!-- Honor of Kings -->
+
+<div class="game-card fade-up" data-game="honor of kings">
+
+    <img src="assets/hok.png" alt="Honor of Kings">
+
+    <div class="game-info">
+
+        <h3>Honor of Kings</h3>
+
+        <p>Top Up Tokens Honor of Kings.</p>
+
+        <a href="hok.html">
+            <button class="game-btn">Top Up Sekarang</button>
+        </a>
+
+    </div>
+
+</div>
+
+<!-- COD Mobile -->
+
+<div class="game-card fade-up" data-game="call of duty mobile">
+
+    <img src="assets/codm.png" alt="COD Mobile">
+
+    <div class="game-info">
+
+        <h3>COD Mobile</h3>
+
+        <p>CP COD Mobile dengan harga terbaik.</p>
+
+        <a href="codm.html">
+            <button class="game-btn">Top Up Sekarang</button>
+        </a>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ================= PAYMENT ================= -->
+
+<section class="payment-section fade-up" id="payment">
+
+    <h2>Metode Pembayaran</h2>
+
+    <p>Mendukung berbagai metode pembayaran populer.</p>
+
+    <div class="payment-grid">
+
+        <div class="payment-card">
+            <img src="assets/qris.png" alt="QRIS">
+            <span>QRIS</span>
+        </div>
+
+        <div class="payment-card">
+            <img src="assets/dana.png" alt="DANA">
+            <span>DANA</span>
+        </div>
+
+        <div class="payment-card">
+            <img src="assets/ovo.png" alt="OVO">
+            <span>OVO</span>
+        </div>
+
+        <div class="payment-card">
+            <img src="assets/gopay.png" alt="GoPay">
+            <span>GoPay</span>
+        </div>
+
+        <div class="payment-card">
+            <img src="assets/shopeepay.png" alt="ShopeePay">
+            <span>ShopeePay</span>
+        </div>
+
+        <div class="payment-card">
+            <img src="assets/bca.png" alt="BCA">
+            <span>BCA</span>
+        </div>
+
+        <div class="payment-card">
+            <img src="assets/bri.png" alt="BRI">
+            <span>BRI</span>
+        </div>
+
+        <div class="payment-card">
+            <img src="assets/mandiri.png" alt="Mandiri">
+            <span>Mandiri</span>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= TESTIMONI ================= -->
+
+<section class="testimoni fade-up">
+
+    <h2>Apa Kata Pelanggan?</h2>
+
+    <p>Lebih dari 10.000 transaksi berhasil diproses.</p>
+
+    <div class="testimoni-container">
+
+        <div class="testimoni-grid fade-up">
+
+            <div class="testimoni-card">
+
+                <img src="assets/user.png" alt="User">
+
+                <h3>Andi</h3>
+
+                <span>⭐⭐⭐⭐⭐</span>
+
+                <p>
+                    Diamond masuk kurang dari 1 menit.
+                    Sangat recommended!
+                </p>
+
+            </div>
+
+            <div class="testimoni-card">
+
+                <img src="assets/user.png" alt="User">
+
+                <h3>Rina</h3>
+
+                <span>⭐⭐⭐⭐⭐</span>
+
+                <p>
+                    Harga murah dan pembayaran lengkap.
+                </p>
+
+            </div>
+
+            <div class="testimoni-card">
+
+                <img src="assets/user.png" alt="User">
+
+                <h3>Budi</h3>
+
+                <span>⭐⭐⭐⭐⭐</span>
+
+                <p>
+                    Website mudah digunakan.
+                    Proses top up sangat cepat.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FAQ ================= -->
+
+<section class="faq fade-up" id="faq">
+
+    <h2>Pertanyaan Umum</h2>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+
+            <span class="faq-icon">⏱️</span> Berapa lama proses top up?
+
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+
+                Biasanya kurang dari 1 menit setelah pembayaran berhasil.
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+
+            <span class="faq-icon">🔒</span> Apakah aman?
+
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+
+                Ya. Data akun tidak disimpan dan transaksi dilakukan dengan aman.
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+
+            <span class="faq-icon">💳</span> Metode pembayaran apa saja?
+
+        </button>
+
+        <div class="faq-answer">
+
+            <p>
+
+                QRIS, DANA, OVO, GoPay, ShopeePay, BCA, BRI dan Mandiri.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-container">
+
+        <div class="footer-logo">
+
+            <h2>🎮 TopUpZone</h2>
+
+            <p>
+
+                Website top up game cepat,
+                aman dan terpercaya.
+
+            </p>
+
+        </div>
+
+        <div class="footer-menu">
+
+            <h3>Menu</h3>
+
+            <a href="#">Home</a>
+            <a href="#game">Game</a>
+            <a href="#payment">Pembayaran</a>
+            <a href="#faq">FAQ</a>
+
+        </div>
+
+        <div class="footer-contact">
+
+            <h3>Kontak</h3>
+
+            <p>📧 support@topupzone.com</p>
+
+            <p>📱 +62 878-2816-3765</p>
+
+            <p>📍 Indonesia</p>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+
+        © 2026 TopUpZone. All Rights Reserved.
+
+    </p>
+
+</footer>
+
+<!-- ================= FLOATING WHATSAPP ================= -->
+
+<a
+
+href="https://wa.me/6287828163765"
+
+target="_blank"
+
+class="whatsapp">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+<!-- ================= BACK TO TOP ================= -->
+
+<button
+
+id="backToTop"
+
+onclick="scrollToTop()">
+
+<i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
