@@ -14,6 +14,7 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     color: white;
+    width: 100%;
 }
 
 /*=========================================
@@ -573,6 +574,16 @@ body.dark .form-group-login input:focus {
 }
 
 /*=========================================
+            MOBILE INPUT FIXES
+=========================================*/
+
+@supports (-webkit-touch-callout: none) {
+    .form-group-login input {
+        font-size: 16px;
+    }
+}
+
+/*=========================================
             RESPONSIVE - TABLET
 =========================================*/
 
@@ -609,8 +620,11 @@ body.dark .form-group-login input:focus {
 
     .login-wrapper {
         flex-direction: column;
-        gap: 20px;
-        padding: 20px 15px;
+        gap: 15px;
+        padding: 15px 12px;
+        min-height: auto;
+        padding-top: 100px;
+        padding-bottom: 30px;
     }
 
     .login-left {
@@ -623,46 +637,97 @@ body.dark .form-group-login input:focus {
     }
 
     .login-form-container {
-        padding: 30px 20px;
-        border-radius: 18px;
+        padding: 25px 18px;
+        border-radius: 16px;
+        max-width: 100%;
     }
 
     .login-header h2 {
-        font-size: 26px;
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+
+    .login-header p {
+        font-size: 13px;
     }
 
     .form-group-login {
-        margin-bottom: 18px;
+        margin-bottom: 15px;
+    }
+
+    .form-group-login label {
+        font-size: 13px;
+        margin-bottom: 6px;
     }
 
     .form-group-login input {
         padding: 12px 12px 12px 40px;
-        font-size: 16px;
+        font-size: 15px;
+        border-radius: 10px;
+        -webkit-appearance: none;
+        appearance: none;
+    }
+
+    .input-wrapper i {
+        left: 13px;
+        font-size: 15px;
+    }
+
+    .toggle-password {
+        right: 12px;
+        font-size: 15px;
     }
 
     .login-btn {
         padding: 12px;
         font-size: 14px;
+        border-radius: 10px;
+    }
+
+    .form-options {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 10px;
+        font-size: 12px;
+        margin-bottom: 18px;
+    }
+
+    .remember-me {
+        font-size: 12px;
+    }
+
+    .forgot-password {
+        font-size: 12px;
+    }
+
+    .divider {
+        font-size: 12px;
+        margin: 16px 0;
     }
 
     .social-login {
         grid-template-columns: 1fr 1fr;
-        gap: 12px;
+        gap: 10px;
+        margin-bottom: 16px;
     }
 
     .social-btn {
-        padding: 11px 15px;
+        padding: 11px 12px;
+        font-size: 12px;
+        border-radius: 10px;
+    }
+
+    .social-btn i {
+        font-size: 15px;
+    }
+
+    .signup-link {
         font-size: 12px;
     }
 
-    .form-options {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-    }
-
-    .divider {
-        margin: 22px 0;
+    .error-message {
+        font-size: 11px;
+        min-height: 14px;
     }
 
 }
@@ -673,73 +738,130 @@ body.dark .form-group-login input:focus {
 
 @media (max-width: 480px) {
 
-    body {
-        padding-top: 70px;
-    }
-
     .login-wrapper {
-        padding: 15px;
-    }
-
-    .login-form-container {
-        padding: 25px 18px;
-    }
-
-    .login-header h2 {
-        font-size: 22px;
-    }
-
-    .login-header p {
-        font-size: 13px;
-    }
-
-    .form-group-login label {
-        font-size: 13px;
-    }
-
-    .form-group-login input {
-        padding: 11px 11px 11px 38px;
-        font-size: 15px;
-    }
-
-    .input-wrapper i {
-        font-size: 14px;
-        left: 12px;
-    }
-
-    .login-btn {
-        padding: 11px;
-        font-size: 13px;
-    }
-
-    .social-login {
+        padding: 12px 10px;
+        padding-top: 90px;
+        padding-bottom: 20px;
         gap: 10px;
     }
 
-    .social-btn {
-        padding: 10px 12px;
-        font-size: 11px;
-        gap: 6px;
+    .login-form-container {
+        padding: 20px 14px;
+        border-radius: 14px;
     }
 
-    .social-btn i {
+    .login-header h2 {
+        font-size: 20px;
+        margin-bottom: 4px;
+    }
+
+    .login-header p {
+        font-size: 12px;
+    }
+
+    .form-group-login {
+        margin-bottom: 12px;
+    }
+
+    .form-group-login label {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    .form-group-login input {
+        padding: 10px 10px 10px 36px;
         font-size: 14px;
+        border-radius: 8px;
+        -webkit-appearance: none;
+        appearance: none;
+    }
+
+    .input-wrapper i {
+        font-size: 13px;
+        left: 11px;
+    }
+
+    .toggle-password {
+        right: 10px;
+        font-size: 13px;
+        padding: 3px;
+    }
+
+    .login-btn {
+        padding: 10px;
+        font-size: 13px;
+        border-radius: 8px;
+    }
+
+    .login-btn i {
+        font-size: 13px;
+    }
+
+    .form-options {
+        gap: 8px;
+        font-size: 11px;
+        margin-bottom: 16px;
+    }
+
+    .remember-me input {
+        width: 14px;
+        height: 14px;
     }
 
     .divider {
+        font-size: 11px;
+        margin: 14px 0;
+        gap: 10px;
+    }
+
+    .social-login {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin-bottom: 14px;
+    }
+
+    .social-btn {
+        padding: 9px 10px;
+        font-size: 10px;
+        border-radius: 8px;
+        gap: 4px;
+    }
+
+    .social-btn i {
         font-size: 12px;
-        margin: 18px 0;
+    }
+
+    .social-btn span {
+        display: none;
     }
 
     .signup-link {
-        font-size: 12px;
+        font-size: 11px;
+    }
+
+    .signup-link a {
+        font-size: 11px;
+    }
+
+    .error-message {
+        font-size: 10px;
+        min-height: 12px;
     }
 
     .dark-btn-login,
     .back-home {
-        width: 45px;
-        height: 45px;
-        font-size: 20px;
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
+        top: 12px;
+    }
+
+    .back-home {
+        left: 12px;
+    }
+
+    .dark-btn-login {
+        right: 12px;
     }
 
 }
