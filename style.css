@@ -2598,3 +2598,65 @@ html{
     scrollbar-width:none;
 }
 
+@media (max-width:768px){
+
+nav{
+    padding:0 20px;
+    height:70px;
+}
+
+.logo{
+    font-size:22px;
+}
+
+}
+@media (max-width:768px){
+
+.slider{
+    width:95%;
+    aspect-ratio:16/9;
+    border-radius:15px;
+}
+
+.slider-btn{
+    width:40px;
+    height:40px;
+    font-size:18px;
+}
+
+.slider-controls{
+    padding:0 10px;
+}
+
+}
+@media (max-width:768px){
+
+.product-grid{
+    grid-template-columns:1fr;
+    gap:20px;
+}
+
+.card{
+    width:100%;
+}
+
+}
+@media (max-width:768px){
+
+.promo-grid{
+    grid-template-columns:1fr;
+}
+
+}
+@media (max-width:768px){
+
+.footer{
+    text-align:center;
+}
+
+.footer-content{
+    flex-direction:column;
+    gap:20px;
+}
+
+}
