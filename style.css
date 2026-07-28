@@ -258,7 +258,7 @@ nav{
     border-radius:20px;
     background:#0f172a;
 
-    aspect-ratio: 18 / 4;
+    aspect-ratio: 16 / 8;
 }
 
 .slide{
@@ -2431,7 +2431,7 @@ footer hr{
     }
 }
 
-}
+
 /* ==========================================
         MOBILE ML PAGE
 ========================================== */
