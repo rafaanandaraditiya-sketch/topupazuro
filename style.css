@@ -2161,7 +2161,7 @@ footer hr{
 
     .slide img{
         width:100%;
-        height:auto;
+        height:100;
         object-fit:cover;
         object-position:center;
         display:block;
@@ -2329,44 +2329,107 @@ footer hr{
 
 }
 /* ===========================
-        MOBILE RESPONSIVE
+   MOBILE RESPONSIVE
 =========================== */
 
-@media (max-width:768px){
+@media screen and (max-width:768px){
 
     nav{
-        height:70px;
-        padding:0 20px;
+        padding:15px 20px;
     }
 
-    .hamburger{
-        display:flex;
+    /* Slider */
+    .slider{
+        width:95%;
+        margin:20px auto;
+        aspect-ratio:16/9;
+        border-radius:15px;
+        overflow:hidden;
     }
 
-    .nav-menu{
+    .slide{
         position:absolute;
-        top:70px;
-        left:0;
+        inset:0;
+        padding:0;
+    }
+
+    .slide img{
         width:100%;
-        background:#111827;
+        height:100%;
+        object-fit:cover;
+        object-position:center;
+        display:block;
+    }
+
+    .slider-controls{
+        padding:0 10px;
+    }
+
+    .slider-btn{
+        width:40px;
+        height:40px;
+        font-size:18px;
+    }
+
+    .slider-dots{
+        bottom:10px;
+    }
+
+    .dot{
+        width:10px;
+        height:10px;
+    }
+
+    .dot.active{
+        width:24px;
+    }
+
+    /* Guide */
+    .guide-container{
         flex-direction:column;
-        align-items:center;
-        gap:20px;
-        padding:25px 0;
-        display:none;
+        text-align:center;
+        gap:30px;
     }
 
-    .nav-menu.active{
-        display:flex;
+    .guide-image img{
+        width:90%;
+        max-width:350px;
     }
 
-    .nav-right{
-        gap:10px;
+    .guide-content{
+        padding:0;
     }
 
-    .login-link-nav{
-        display:none;
+    .guide-content h2{
+        font-size:30px;
     }
+
+    .guide-content p{
+        font-size:16px;
+    }
+
+    .guide-content li{
+        font-size:16px;
+        text-align:left;
+    }
+
+    /* Game */
+    .game-grid{
+        grid-template-columns:1fr 1fr;
+        gap:15px;
+    }
+
+    /* Payment */
+    .payment-grid{
+        grid-template-columns:1fr 1fr;
+        gap:15px;
+    }
+
+    /* Footer */
+    .footer-container{
+        grid-template-columns:1fr;
+    }
+}
 
 }
 /* ==========================================
