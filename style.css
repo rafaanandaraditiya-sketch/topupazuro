@@ -251,14 +251,14 @@ nav{
 }
 
 .slider{
-    width:92%;
+    width:95%;
     margin:30px auto;
     position:relative;
     overflow:hidden;
     border-radius:20px;
     background:#0f172a;
 
-    aspect-ratio: 22 / 5;
+    aspect-ratio: 18 / 4;
 }
 
 .slide{
